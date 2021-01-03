@@ -56,8 +56,10 @@ in {
       # :lang rust
       rustfmt
       unstable.rust-analyzer
-      # :tools magit+forge
+      # :tools magit+forge for building emacsql-sqlite
       gcc
+      # For eshell completion
+      fish
     ];
 
     env.PATH = [ "$XDG_CONFIG_HOME/emacs/bin" ];
