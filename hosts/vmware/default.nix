@@ -23,23 +23,17 @@
         firefox.enable = true;
       };
       media = {
-	documents.enable = true;
-	graphics = {
-	  enable = true;
-	  raster.enable = false;
-	  vector.enable = false;
-	  sprites.enable = false;
-	};
-	# mpv.enable = true;
-        # recording.enable = true;
-        # spotify.enable = true;
+        documents.enable = true;
+        graphics = {
+          enable = true;
+          raster.enable = false;
+          vector.enable = false;
+          sprites.enable = false;
+	      };
       };
       term = {
         default = "xst";
         st.enable = true;
-      };
-      vm = {
-        # virtualbox.enable = true;
       };
     };
     editors = {
@@ -64,9 +58,9 @@
     shell = {
       direnv.enable = true;
       git.enable = true;
-      gnupg.enable = true;
+      # gnupg.enable = true;
       # weechat.enable = true;
-      pass.enable = true;
+      # pass.enable = true;
       tmux.enable = true;
       # ranger.enable = true;
       zsh.enable = true;
