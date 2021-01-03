@@ -56,6 +56,8 @@ in {
       # :lang rust
       rustfmt
       unstable.rust-analyzer
+      # :tools magit+forge
+      gcc
     ];
 
     env.PATH = [ "$XDG_CONFIG_HOME/emacs/bin" ];

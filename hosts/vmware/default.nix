@@ -7,12 +7,14 @@
     ./hardware-configuration.nix
   ];
 
+  virtualisation.vmware.guest.enable = true;
+
   ## Modules
   modules = {
-    desktop = {
-      bspwm.enable = true;
+	  desktop = {
+		  i3.enable = true;
       apps = {
-        discord.enable = true;
+        # discord.enable = true;
         rofi.enable = true;
         # skype.enable = true;
       };
@@ -21,12 +23,16 @@
         firefox.enable = true;
       };
       media = {
-        # daw.enable = true;
-        documents.enable = true;
-        graphics.enable = true;
-        mpv.enable = true;
-        recording.enable = true;
-        spotify.enable = true;
+	documents.enable = true;
+	graphics = {
+	  enable = true;
+	  raster.enable = false;
+	  vector.enable = false;
+	  sprites.enable = false;
+	};
+	# mpv.enable = true;
+        # recording.enable = true;
+        # spotify.enable = true;
       };
       term = {
         default = "xst";
@@ -49,11 +55,11 @@
       # lua.love2d.enable = true;
     };
     hardware = {
-      audio.enable = true;
-      fs = {
-        enable = true;
-        ssd.enable = true;
-      };
+      # audio.enable = true;
+      # fs = {
+      #  enable = true;
+      #  ssd.enable = true;
+      # };
     };
     shell = {
       direnv.enable = true;
@@ -80,8 +86,5 @@
   programs.ssh.startAgent = true;
   services.openssh.startWhenNeeded = true;
 
-  networking.wireless.enable = true;
-  hardware.opengl.enable = true;
-
-  # time.timeZone = "Europe/Copenhagen";
+  # hardware.opengl.enable = true;
 }
