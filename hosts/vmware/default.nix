@@ -1,18 +1,14 @@
 # Shiro -- my laptop
 
-{ ... }:
-{
-  imports = [
-    ../personal.nix
-    ./hardware-configuration.nix
-  ];
+{ ... }: {
+  imports = [ ../personal.nix ./hardware-configuration.nix ];
 
   virtualisation.vmware.guest.enable = true;
 
   ## Modules
   modules = {
-	  desktop = {
-		  i3.enable = true;
+    desktop = {
+      i3.enable = true;
       apps = {
         # discord.enable = true;
         rofi.enable = true;
@@ -29,7 +25,7 @@
           raster.enable = false;
           vector.enable = false;
           sprites.enable = false;
-	      };
+        };
       };
       term = {
         default = "xst";
@@ -74,7 +70,6 @@
     };
     theme.active = "alucard";
   };
-
 
   ## Local config
   programs.ssh.startAgent = true;
