@@ -46,12 +46,9 @@ in {
         symbola
         noto-fonts
         noto-fonts-cjk
-	hasklig
+        hasklig
       ];
     };
-
-    ## Apps/Services
-    services.xserver.displayManager.lightdm.greeters.mini.user = config.user.name;
 
     services.picom = {
       backend = "glx";

@@ -100,10 +100,6 @@ in {
          };
        }))
 
-    (mkIf (cfg.loginWallpaper != null) {
-      services.xserver.displayManager.lightdm.background = cfg.loginWallpaper;
-    })
-
     (mkIf (cfg.onReload != {})
       (let reloadTheme =
              with pkgs; (writeScriptBin "reloadTheme" ''
