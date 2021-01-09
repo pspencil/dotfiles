@@ -69,16 +69,16 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Control+t exec i3-input -P "Rename: " -F "rename workspace to %s"
 
 # Launch any application
-bindsym $mod+p exec "rofi -lines 12 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -font 'Noto Sans 15' -show run"
+bindsym $mod+p exec $DOTFILES/bin/rofi/appmenu
 # Switch to any window
-bindsym $mod+g exec "rofi -lines 12 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -font 'Noto Sans 15' -show window"
+bindsym $mod+w exec $DOTFILES/bin/rofi/windowmenu
 
 bindsym $mod+Return exec xst
 
 bindsym $mod+a focus parent
 
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+minus move scratchpad
@@ -184,7 +184,7 @@ default_floating_border normal
 
 hide_edge_borders none
 
-font xft:URWGothic-Book 11
+font pango:'Fira Code' 11
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border

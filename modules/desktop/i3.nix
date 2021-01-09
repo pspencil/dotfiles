@@ -13,7 +13,8 @@ in {
       "/libexec"
     ]; # links /libexec from derivations to /run/current-system/sw
 
-    home.file = configDirWithFilter ".i3" (/. + "${configDir}/i3") notOrgFile;
+    home.configFile = (xdgLiterateConfigDir "i3")
+      // (xdgLiterateConfigDir "i3status");
 
     services.xserver = {
       enable = true;

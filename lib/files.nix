@@ -1,7 +1,8 @@
 { lib, ... }:
 
 with builtins;
-with lib; {
+with lib;
+with lib.my; rec {
 
   # Works like xdg.configDir = { recursive = true; } but with a filter.
   # configDirWithFilter::
@@ -23,4 +24,7 @@ with lib; {
       }) (filter pred (allFiles dir)));
 
   notOrgFile = file: !(hasSuffix ".org" file);
+
+  xdgLiterateConfigDir = name:
+    configDirWithFilter name (/. + "${configDir}/${name}") notOrgFile;
 }

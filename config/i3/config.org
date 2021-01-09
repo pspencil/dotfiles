@@ -106,9 +106,9 @@ bindsym $mod+Control+t exec i3-input -P "Rename: " -F "rename workspace to %s"
 I use [[https://github.com/davatorium/rofi][rofi]]. The theme can be found [[file:~/.doom.d/other/xresources.org::*Rofi][here]].
 #+begin_src conf
 # Launch any application
-bindsym $mod+p exec "rofi -lines 12 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -font 'Noto Sans 15' -show run"
+bindsym $mod+p exec $DOTFILES/bin/rofi/appmenu
 # Switch to any window
-bindsym $mod+g exec "rofi -lines 12 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -font 'Noto Sans 15' -show window"
+bindsym $mod+w exec $DOTFILES/bin/rofi/windowmenu
 #+end_src
 ** Starting terminal
 I am using [[http://st.suckless.org][st]]. My configuration can be found at [[https://github.com/pspencil/st][here]].
@@ -123,7 +123,7 @@ bindsym $mod+a focus parent
 Stacked, tabbed or toggle split
 #+begin_src conf
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
 #+end_src
 ** Scratch pad
@@ -276,7 +276,7 @@ hide_edge_borders none
 #+end_src
 ** Font
 #+begin_src conf
-font xft:URWGothic-Book 11
+font pango:'Fira Code' 11
 #+end_src
 ** Theme colors
 #+begin_src conf
