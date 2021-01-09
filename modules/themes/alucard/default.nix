@@ -93,6 +93,9 @@ in {
             "inkscape/templates/default.svg".source =
               ./config/inkscape/default-template.svg;
           })
+          (mkIf desktop.media.documents.pdf.enable {
+            "zathura/zathurarc".source = ./config/zathurarc;
+          })
         ];
     })
   ]);
