@@ -9,6 +9,7 @@
   modules = {
     desktop = {
       i3.enable = true;
+      email.enable = true;
       apps = {
         # discord.enable = true;
         rofi.enable = true;
@@ -54,9 +55,9 @@
     shell = {
       direnv.enable = true;
       git.enable = true;
-      # gnupg.enable = true;
+      gnupg.enable = true;
       # weechat.enable = true;
-      # pass.enable = true;
+      pass.enable = true;
       tmux.enable = true;
       # ranger.enable = true;
       zsh.enable = true;
